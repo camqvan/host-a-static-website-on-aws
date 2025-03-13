@@ -39,6 +39,7 @@ The architecture of this deployment includes:
 🔹 Route 53: Manages the domain name and DNS record setup.
 
 🚀 Deployment Steps:
+
 #!/bin/bash
 ## Switch to the root user for administrative privileges
 sudo su
