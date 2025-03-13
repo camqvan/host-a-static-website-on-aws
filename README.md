@@ -1,4 +1,4 @@
-## Host a Static Website on AWS
+# Host a Static Website on AWS
 
 📌 Project Overview
 
@@ -40,32 +40,32 @@ The architecture of this deployment includes:
 
 🚀 Deployment Steps:
 #!/bin/bash
-# Switch to the root user for administrative privileges
+## Switch to the root user for administrative privileges
 sudo su
 
-# Update installed packages to their latest versions
+## Update installed packages to their latest versions
 yum update -y
 
-# Install Apache HTTP Server
+## Install Apache HTTP Server
 yum install -y httpd
 
-# Change the working directory to the Apache web root
+## Change the working directory to the Apache web root
 cd /var/www/html
 
-# Install Git
+## Install Git
 yum install git -y
 
-# Clone the project GitHub repository
+## Clone the project GitHub repository
 git clone https://github.com/camqvan/host-a-static-website-on-aws.git
 
-# Copy all files from the cloned repository to the Apache web root
+## Copy all files from the cloned repository to the Apache web root
 cp -R host-a-static-website-on-aws/. /var/www/html/
 
-# Remove the cloned repository directory to clean up unnecessary files
+## Remove the cloned repository directory to clean up unnecessary files
 rm -rf host-a-static-website-on-aws
 
-# Enable Apache HTTP Server to start automatically at system boot
+## Enable Apache HTTP Server to start automatically at system boot
 systemctl enable httpd  
 
-# Start Apache HTTP Server
+## Start Apache HTTP Server
 systemctl start httpd  
